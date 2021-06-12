@@ -1,6 +1,8 @@
 # Styleformer
 A Neural-Style Transfer framework to transfer smoothly between formal and casual natural language text renderings. Created by Prithiviraj Damodaran. Open to pull requests and other forms of collaboration.
 
+## Formal and casual language in English
+- [What makes text formal or casual/informal](https://www.niu.edu/writingtutorial/style/formal-and-informal-style.shtml)
 
 ## Installation
 ```python
