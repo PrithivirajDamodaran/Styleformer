@@ -45,9 +45,9 @@ pip install git+https://github.com/PrithivirajDamodaran/Styleformer.git
 ```python
 from styleformer import Styleformer
 
-# Style = [0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active]
-# inference_speed = [0=Default CPU, 1= Regular model over GPU, 2=Quantized over CPU]
-sf = Styleformer(style = 3, inference_speed=0) 
+# style = [0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active]
+# inference_on = [0= On CPU, 1= Regular model On GPU, 2=Quantized model On CPU]
+sf = Styleformer(style = 3, inference_on=0) 
 
 source_sentences = [
 ]   
