@@ -46,14 +46,14 @@ pip install git+https://github.com/PrithivirajDamodaran/Styleformer.git
 from styleformer import Styleformer
 
 # style = [0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active]
-# inference_on = [0= On CPU, 1= Regular model On GPU, 2=Quantized model On CPU]
-sf = Styleformer(style = 3, inference_on=0) 
+sf = Styleformer(style = 3) 
 
 source_sentences = [
 ]   
 
 for source_sentence in source_sentences:
-    target_sentence = sf.transfer(source_sentence)
+    # inference_on = [0=Regular model On CPU, 1= Regular model On GPU, 2=Quantized model On CPU]
+    target_sentence = sf.transfer(source_sentence, inference_on=0)
     print("[Informal] ", source_sentence)
     print("[Formal] ",target_sentence[0])
     print("-" *100)
