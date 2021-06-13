@@ -11,36 +11,35 @@ A Neural-Style Transfer framework to transfer smoothly between formal and casual
 ## Formal and casual language in English
 - [What makes text formal or casual/informal](https://www.niu.edu/writingtutorial/style/formal-and-informal-style.shtml)
 
+## Usecases for Styleformer
+
+**Area 1: Data Augmentation**
+- Augment training datasets with various fine-grained language styles.
+
+**Area 2: Post-processing**
+- Apply style transfers to machine generated text. 
+- e.g.
+    - Refine a Summarised text to active voice + formal language.
+    - Refine a Translated text to more casual to reach younger audience.
+
+**Area 3: Assisted writing**
+- Integrate this to any human writing interfaces like email clients, messaging tools or social media post authoring tools. Your creativity is your limit to te uses. 
+- e.g.
+    - Polish an email with business language for official purposes.
+
 ## Installation
 ```python
 pip install git+https://github.com/PrithivirajDamodaran/Styleformer.git
 ```
 ## Quick Start
 
-### Transfer - [Available now]
+### Casual to Formal (Available now !)
 ```python
 from styleformer import Styleformer
-import torch
 
-def set_seed(seed):
-  torch.manual_seed(seed)
-  if torch.cuda.is_available():
-    torch.cuda.manual_seed_all(seed)
-
-set_seed(1212)
-
-
-sf = Styleformer(style = 3 , use_gpu=False) # 0=Active to Passive, 1=Passive to Active, 2=Formal to Informal, 3=Informal to Formal 
+sf = Styleformer(style = 3 , use_gpu=False) # 0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active, 
 
 source_sentences = [
-    "Matt like fish",
-    "the collection of letters was original used by the ancient Romans",
-    "We enjoys horror movies",
-    "Anna and Mike is going skiing",
-    "I walk to the store and I bought milk",
-    "We all eat the fish and then made dessert",
-    "I will eat fish for dinner and drank milk",
-    "what be the reason for everyone leave the company",
 ]   
 
 for source_sentence in source_sentences:
