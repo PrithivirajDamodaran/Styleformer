@@ -79,7 +79,9 @@ for source_sentence in source_sentences:
 - TBD
 
 ## References
-- TBD
+- [Generative Text Style Transfer for Improved Language Sophistication](http://cs230.stanford.edu/projects_winter_2020/reports/32069807.pdf)
+- [Delete, Retrieve, Generate: A Simple Approach to Sentiment and Style Transfer](https://arxiv.org/pdf/1804.06437.pdf)
+
 ## Citation
 - TBD
 
