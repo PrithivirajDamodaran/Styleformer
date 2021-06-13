@@ -6,7 +6,7 @@
 </p>
 
 # Styleformer
-A Neural-Style Transfer framework to transfer natural language text smoothly between fine-grained language styles like formal/casual, active/passive and many more. For instance, understand [What makes text formal or casual/informal](https://www.niu.edu/writingtutorial/style/formal-and-informal-style.shtml).
+A Neural Language Style Transfer framework to transfer natural language text smoothly between fine-grained language styles like formal/casual, active/passive, and many more.For instance, understand [What makes text formal or casual/informal](https://www.niu.edu/writingtutorial/style/formal-and-informal-style.shtml).
 
 ## Table of contents
 - [Usecases for Styleformer](#usecases-for-styleformer)
