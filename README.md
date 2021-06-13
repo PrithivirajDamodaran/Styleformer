@@ -27,8 +27,8 @@ A Neural-Style Transfer framework to transfer natural language text smoothly bet
 **Area 2: Post-processing**
 - Apply style transfers to machine generated text. 
 - e.g.
-    - Refine a Summarised text to active voice + formal language.
-    - Refine a Translated text to more casual to reach younger audience.
+    - Refine a Summarised text to active voice + formal tone.
+    - Refine a Translated text to more casual tone to reach younger audience.
 
 **Area 3: Assisted writing**
 - Integrate this to any human writing interfaces like email clients, messaging tools or social media post authoring tools. Your creativity is your limit to te uses. 
