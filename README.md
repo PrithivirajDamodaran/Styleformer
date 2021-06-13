@@ -6,10 +6,7 @@
 </p>
 
 # Styleformer
-A Neural-Style Transfer framework to transfer smoothly between formal and casual natural language text renderings. Created by Prithiviraj Damodaran. Open to pull requests and other forms of collaboration.
-
-## Formal and casual language in English
-- [What makes text formal or casual/informal](https://www.niu.edu/writingtutorial/style/formal-and-informal-style.shtml)
+A Neural-Style Transfer framework to transfer smoothly between formal and casual natural language text renderings. For instance, understand [What makes text formal or casual/informal](https://www.niu.edu/writingtutorial/style/formal-and-informal-style.shtml).
 
 ## Usecases for Styleformer
 
@@ -37,7 +34,9 @@ pip install git+https://github.com/PrithivirajDamodaran/Styleformer.git
 ```python
 from styleformer import Styleformer
 
-sf = Styleformer(style = 3 , use_gpu=False) # 0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active, 
+# Style = [0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active]
+# inference_speed = [0=Default CPU, 1= Regular model over GPU, 2=Quantized over CPU]
+sf = Styleformer(style = 3, inference_speed=0) 
 
 source_sentences = [
 ]   
@@ -48,4 +47,31 @@ for source_sentence in source_sentences:
     print("[Formal] ",target_sentence[0])
     print("-" *100)
 ```
+
+## Models
+
+|      Model          |Type                          |Status                         
+|----------------|-------------------------------|-----------------------------|
+|prithivida/informal_to_formal_styletransfer |Seq2Seq |Beta
+|prithivida/formal_to_informal_styletransfer|Seq2Seq    |WIP|
+|prithivida/active_to_passive_styletransfer|Seq2Seq    |WIP|
+|prithivida/passive_to_active_styletransfer|Seq2Seq    |WIP|
+|prithivida/positive_to_negative_styletransfer|Seq2Seq    |WIP|
+|prithivida/negative_to_positive_styletransfer|Seq2Seq    |WIP|
+
+
+## Dataset
+- TBD
+- Fined tuned on T5 on a Tesla T4 GPU and it took ~2 hours to train each of the above models with batch_size = 16 and epochs = 5.(Will share training args shortly)
+
+## Benchmark
+- TBD
+
+## References
+- TBD
+## Citation
+- TBD
+
+
+
 
