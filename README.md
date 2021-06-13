@@ -33,7 +33,7 @@ A Neural-Style Transfer framework to transfer natural language text smoothly bet
 **Area 3: Assisted writing**
 - Integrate this to any human writing interfaces like email clients, messaging tools or social media post authoring tools. Your creativity is your limit to te uses. 
 - e.g.
-    - Polish an email with business language for official purposes.
+    - Polish an email with business tone for professional uses.
 
 ## Installation
 ```python
