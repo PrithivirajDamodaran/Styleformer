@@ -8,6 +8,17 @@
 # Styleformer
 A Neural-Style Transfer framework to transfer smoothly between formal and casual natural language text renderings. For instance, understand [What makes text formal or casual/informal](https://www.niu.edu/writingtutorial/style/formal-and-informal-style.shtml).
 
+## Table of contents
+- [Usecases for Styleformer](#usecases-for-styleformer)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+  * [Casual to Formal (Available now !)](#casual-to-formal--available-now---)
+- [Models](#models)
+- [Dataset](#dataset)
+- [Benchmark](#benchmark)
+- [References](#references)
+- [Citation](#citation)
+
 ## Usecases for Styleformer
 
 **Area 1: Data Augmentation**
