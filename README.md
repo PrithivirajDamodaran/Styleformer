@@ -2,7 +2,7 @@
 [![Visits Badge](https://badges.pufler.dev/visits/PrithivirajDamodaran/Styleformer)](https://badges.pufler.dev)
 
 <p align="center">
-    <img src="images/Styleformer.png" width="35%" height="35%"/>
+    <img src="images/Styleformer.png" width="50%" height="50%"/>
 </p>
 
 # Styleformer
