@@ -45,18 +45,24 @@ pip install git+https://github.com/PrithivirajDamodaran/Styleformer.git
 ```python
 from styleformer import Styleformer
 
-# style = [0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active]
+# style = [0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active etc..]
 sf = Styleformer(style = 3) 
 
 source_sentences = [
 ]   
 
 for source_sentence in source_sentences:
+
     # inference_on = [0=Regular model On CPU, 1= Regular model On GPU, 2=Quantized model On CPU]
     target_sentence = sf.transfer(source_sentence, inference_on=0)
-    print("[Informal] ", source_sentence)
-    print("[Formal] ",target_sentence[0])
     print("-" *100)
+    print("[Informal] ", source_sentence)
+    print("-" *100)
+    if target_sentence:
+        print("[Formal] ",target_sentence)
+    else:
+        print("No good quality transfers available !")
+
 ```
 
 ## Models
