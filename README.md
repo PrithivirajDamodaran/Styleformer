@@ -46,7 +46,7 @@ pip install git+https://github.com/PrithivirajDamodaran/Styleformer.git
 from styleformer import Styleformer
 
 # style = [0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active etc..]
-sf = Styleformer(style = 3) 
+sf = Styleformer(style = 0) 
 
 source_sentences = [
 ]   
