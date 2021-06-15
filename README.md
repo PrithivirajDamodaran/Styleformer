@@ -150,7 +150,7 @@ target_sentence = sf.transfer(source_sentence, inference_on=0, quality_filter=0.
 
 |      Model          |Type                          |Status                         
 |----------------|-------------------------------|-----------------------------|
-|prithivida/informal_to_formal_styletransfer |Seq2Seq |Beta
+|[prithivida/informal_to_formal_styletransfer](https://huggingface.co/prithivida/informal_to_formal_styletransfer)|Seq2Seq |Beta
 |prithivida/formal_to_informal_styletransfer|Seq2Seq    |WIP|
 |prithivida/active_to_passive_styletransfer|Seq2Seq    |WIP|
 |prithivida/passive_to_active_styletransfer|Seq2Seq    |WIP|
