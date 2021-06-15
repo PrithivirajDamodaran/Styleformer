@@ -47,6 +47,16 @@ pip install git+https://github.com/PrithivirajDamodaran/Styleformer.git
 ### Casual to Formal (Available now !)
 ```python
 from styleformer import Styleformer
+import torch
+import warnings
+warnings.filterwarnings("ignore")
+
+def set_seed(seed):
+  torch.manual_seed(seed)
+  if torch.cuda.is_available():
+    torch.cuda.manual_seed_all(seed)
+
+set_seed(1234)
 
 # style = [0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active etc..]
 sf = Styleformer(style = 0) 
@@ -70,6 +80,54 @@ for source_sentence in source_sentences:
         print()
     else:
         print("No good quality transfers available !")
+```
+
+```
+[Informal]  I am quitting my job
+[Formal]  I will be stepping down from my job.
+----------------------------------------------------------------------------------------------------
+[Informal]  Jimmy is on crack and can't trust him
+[Formal]  Jimmy is a crack addict I cannot trust him
+----------------------------------------------------------------------------------------------------
+[Informal]  What do guys do to show that they like a gal?
+[Formal]  What do guys do to demonstrate their affinity for women?
+----------------------------------------------------------------------------------------------------
+[Informal]  i loooooooooooooooooooooooove going to the movies.
+[Formal]  I really like to go to the movies.
+----------------------------------------------------------------------------------------------------
+[Informal]  That movie was fucking awesome
+[Formal]  That movie was wonderful.
+----------------------------------------------------------------------------------------------------
+[Informal]  My mom is doing fine
+[Formal]  My mother is doing well.
+----------------------------------------------------------------------------------------------------
+[Informal]  That was funny LOL
+[Formal]  That was hilarious
+----------------------------------------------------------------------------------------------------
+[Informal]  It's piece of cake, we can do it
+[Formal]  The whole process is simple and is possible.
+----------------------------------------------------------------------------------------------------
+[Informal]  btw - ur avatar looks familiar
+[Formal]  That avatar looks familiar.
+----------------------------------------------------------------------------------------------------
+[Informal]  who gives a crap?
+[Formal]  Who cares?
+----------------------------------------------------------------------------------------------------
+[Informal]  Howdy Lucy! been ages since we last met.
+[Formal]  Hello, Lucy It has been a long time since we last met.
+----------------------------------------------------------------------------------------------------
+[Informal]  Dude, this car's dope!
+[Formal]  I find this car very appealing.
+----------------------------------------------------------------------------------------------------
+[Informal]  She's my bestie from college
+[Formal]  She is my best friend from college.
+----------------------------------------------------------------------------------------------------
+[Informal]  I kinda have a feeling that he has a crush on you.
+[Formal]  I have a feeling that he is attracted to you.
+----------------------------------------------------------------------------------------------------
+[Informal]  OMG! It's finger-lickin' good.
+[Formal]  Yes. It is incredibly good.
+----------------------------------------------------------------------------------------------------
 ```
 
 ## Knobs
