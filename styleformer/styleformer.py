@@ -3,7 +3,6 @@ class Styleformer():
   def __init__(self,  style=0):
     from transformers import AutoTokenizer
     from transformers import AutoModelForSeq2SeqLM
-    from adequacy import Adequacy
     
     self.style = style
     self.adequacy = Adequacy()
