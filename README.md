@@ -52,12 +52,15 @@ import torch
 import warnings
 warnings.filterwarnings("ignore")
 
+'''
+#uncomment for re-producability
 def set_seed(seed):
   torch.manual_seed(seed)
   if torch.cuda.is_available():
     torch.cuda.manual_seed_all(seed)
 
 set_seed(1234)
+'''
 
 # style = [0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active etc..]
 sf = Styleformer(style = 0) 
