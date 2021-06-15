@@ -68,7 +68,7 @@ source_sentences = [
 "i loooooooooooooooooooooooove going to the movies.",
 "That movie was fucking awesome",
 "My mom is doing fine",
-"That was funny LOL",
+"That was funny LOL" , 
 "It's piece of cake, we can do it",
 "btw - ur avatar looks familiar",
 "who gives a crap?",
