@@ -40,7 +40,7 @@ A Neural Language Style Transfer framework to transfer natural language text smo
 
 ## Installation
 ```python
-pip install git+https://github.com/PrithivirajDamodaran/Styleformer.git
+pip install git+https://github.com/PrithivirajDamodaran/Styleformer.git@v0.1
 ```
 ## Quick Start
 
@@ -68,7 +68,7 @@ source_sentences = [
 "i loooooooooooooooooooooooove going to the movies.",
 "That movie was fucking awesome",
 "My mom is doing fine",
-"That was funny LOL",
+"That was funny LOL" , 
 "It's piece of cake, we can do it",
 "btw - ur avatar looks familiar",
 "who gives a crap?",
@@ -143,14 +143,14 @@ for source_sentence in source_sentences:
 ## Knobs
 
 ```python
-target_sentence = sf.transfer(source_sentence, inference_on=0, quality_filter=0.99, max_candidates=3)
+target_sentence = sf.transfer(source_sentence, inference_on=0, quality_filter=0.95, max_candidates=5)
 ```
 
 ## Models
 
 |      Model          |Type                          |Status                         
 |----------------|-------------------------------|-----------------------------|
-|prithivida/informal_to_formal_styletransfer |Seq2Seq |Beta
+|[prithivida/informal_to_formal_styletransfer](https://huggingface.co/prithivida/informal_to_formal_styletransfer)|Seq2Seq |Beta
 |prithivida/formal_to_informal_styletransfer|Seq2Seq    |WIP|
 |prithivida/active_to_passive_styletransfer|Seq2Seq    |WIP|
 |prithivida/passive_to_active_styletransfer|Seq2Seq    |WIP|
