@@ -30,7 +30,10 @@ A Neural Language Style Transfer framework to transfer natural language text smo
     - Refine a Summarised text to active voice + formal tone.
     - Refine a Translated text to more casual tone to reach younger audience.
 
-**Area 3: Assisted writing**
+**Area 3: Controlled paraphrasing**
+- Formal <=> Casual and Active <=> style transfers adds a notion of control over how we paraphrase when compared to free-form paraphrase where there is control or guarantee over the paraphrases.
+
+**Area 4: Assisted writing**
 - Integrate this to any human writing interfaces like email clients, messaging tools or social media post authoring tools. Your creativity is your limit to te uses. 
 - e.g.
     - Polish an email with business tone for professional uses.
@@ -49,6 +52,11 @@ from styleformer import Styleformer
 sf = Styleformer(style = 0) 
 
 source_sentences = [
+"The study checked out the health effects of passive smoking.",
+"This experiment worked out just fine.",
+"The outcomes of the study haven't been documented yet.",
+"who racked up so much money?",
+"My dad is doing fine",
 ]   
 
 for source_sentence in source_sentences:
@@ -57,11 +65,17 @@ for source_sentence in source_sentences:
     print("-" *100)
     print("[Informal] ", source_sentence)
     print("-" *100)
-    if target_sentence:
+    if target_sentence is not None:
         print("[Formal] ",target_sentence)
+        print()
     else:
         print("No good quality transfers available !")
+```
 
+## Knobs
+
+```python
+target_sentence = sf.transfer(source_sentence, inference_on=0, quality_filter=0.99, max_candidates=3)
 ```
 
 ## Models
