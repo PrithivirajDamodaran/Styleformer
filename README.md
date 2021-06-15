@@ -62,11 +62,21 @@ set_seed(1234)
 sf = Styleformer(style = 0) 
 
 source_sentences = [
-"The study checked out the health effects of passive smoking.",
-"This experiment worked out just fine.",
-"The outcomes of the study haven't been documented yet.",
-"who racked up so much money?",
-"My dad is doing fine",
+"I am quitting my job",
+"Jimmy is on crack and can't trust him",
+"What do guys do to show that they like a gal?",
+"i loooooooooooooooooooooooove going to the movies.",
+"That movie was fucking awesome",
+"My mom is doing fine",
+"That was funny LOL",
+"It's piece of cake, we can do it",
+"btw - ur avatar looks familiar",
+"who gives a crap?",
+"Howdy Lucy! been ages since we last met.",
+"Dude, this car's dope!",
+"She's my bestie from college",
+"I kinda have a feeling that he has a crush on you.",
+"OMG! It's finger-lickin' good.",
 ]   
 
 for source_sentence in source_sentences:
@@ -108,7 +118,7 @@ for source_sentence in source_sentences:
 [Formal]  The whole process is simple and is possible.
 ----------------------------------------------------------------------------------------------------
 [Informal]  btw - ur avatar looks familiar
-[Formal]  That avatar looks familiar.
+[Formal]  Also, your avatar looks familiar.
 ----------------------------------------------------------------------------------------------------
 [Informal]  who gives a crap?
 [Formal]  Who cares?
@@ -126,7 +136,7 @@ for source_sentence in source_sentences:
 [Formal]  I have a feeling that he is attracted to you.
 ----------------------------------------------------------------------------------------------------
 [Informal]  OMG! It's finger-lickin' good.
-[Formal]  Yes. It is incredibly good.
+[Formal]  It is so good, it is delicious.
 ----------------------------------------------------------------------------------------------------
 ```
 
