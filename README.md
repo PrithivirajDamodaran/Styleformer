@@ -85,7 +85,7 @@ source_sentences = [
 
 for source_sentence in source_sentences:
     # inference_on = [0=Regular model On CPU, 1= Regular model On GPU, 2=Quantized model On CPU]
-    target_sentence = sf.transfer(source_sentence, inference_on=0)
+    target_sentence = sf.transfer(source_sentence)
     print("-" *100)
     print("[Informal] ", source_sentence)
     print("-" *100)
