@@ -1,4 +1,5 @@
 [![PyPI - License](https://img.shields.io/hexpm/l/plug)](https://github.com/PrithivirajDamodaran/Styleformer/blob/main/LICENSE)
+[![Visits Badge](https://badges.pufler.dev/visits/PrithivirajDamodaran/Styleformer)](https://badges.pufler.dev)
 
 
 <p align="center">
