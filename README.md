@@ -143,7 +143,7 @@ for source_sentence in source_sentences:
 ## Knobs
 
 ```python
-target_sentence = sf.transfer(source_sentence, inference_on=0, quality_filter=0.99, max_candidates=3)
+target_sentence = sf.transfer(source_sentence, inference_on=0, quality_filter=0.95, max_candidates=5)
 ```
 
 ## Models
