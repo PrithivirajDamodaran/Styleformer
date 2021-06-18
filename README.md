@@ -14,6 +14,8 @@ A Neural Language Style Transfer framework to transfer natural language text smo
 - [Installation](#installation)
 - [Quick Start](#quick-start)
   * [Casual to Formal (Available now !)](#casual-to-formal--available-now---)
+  * [Active to Passive (Available now !)](#active-to-passive--available-now---)
+- [Knobs](#knobs)
 - [Models](#models)
 - [Dataset](#dataset)
 - [Benchmark](#benchmark)
@@ -142,6 +144,8 @@ for source_sentence in source_sentences:
 [Formal]  It is so good, it is delicious.
 ----------------------------------------------------------------------------------------------------
 ```
+
+### Active to Passive (Available now !)
 
 ## Knobs
 
