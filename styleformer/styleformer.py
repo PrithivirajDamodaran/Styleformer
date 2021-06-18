@@ -81,6 +81,6 @@ class Styleformer():
           early_stopping=True,
           num_return_sequences=1)
      
-      return gen_sentences.add(self.atp_tokenizer.decode(preds[0], skip_special_tokens=True).strip())
+      return self.atp_tokenizer.decode(preds[0], skip_special_tokens=True).strip()
 
     
