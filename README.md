@@ -171,7 +171,7 @@ target_sentence = sf.transfer(source_sentence, inference_on=0, quality_filter=0.
 
 
 ## Dataset
-- TBD
+- Custom Dataset
 - Fined tuned on T5 on a Tesla T4 GPU and it took ~2 hours to train each of the above models with batch_size = 16 and epochs = 5.(Will share training args shortly)
 
 ## Benchmark
