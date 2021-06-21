@@ -7,33 +7,33 @@ class Styleformer():
 
     self.style = style
     self.adequacy = Adequacy()
-    model_loaded = False
+    self.model_loaded = False
 
     if self.style == 0:
       self.ctf_tokenizer = AutoTokenizer.from_pretrained("prithivida/informal_to_formal_styletransfer")
       self.ctf_model = AutoModelForSeq2SeqLM.from_pretrained("prithivida/informal_to_formal_styletransfer")
       print("Casual to Formal model loaded...")
-      model_loaded = True
+      self.model_loaded = True
     elif self.style == 1:
       self.ftc_tokenizer = AutoTokenizer.from_pretrained("prithivida/formal_to_informal_styletransfer")
       self.ftc_model = AutoModelForSeq2SeqLM.from_pretrained("prithivida/formal_to_informal_styletransfer")
       print("Formal to Casual model loaded...")
-      model_loaded = True  
+      self.model_loaded = True  
     elif self.style == 2:
       self.atp_tokenizer = AutoTokenizer.from_pretrained("prithivida/active_to_passive_styletransfer")
       self.atp_model = AutoModelForSeq2SeqLM.from_pretrained("prithivida/active_to_passive_styletransfer")
       print("Active to Passive model loaded...")  
-      model_loaded = True
+      self.model_loaded = True
     elif self.style == 3:
       self.pta_tokenizer = AutoTokenizer.from_pretrained("prithivida/passive_to_active_styletransfer")
       self.pta_model = AutoModelForSeq2SeqLM.from_pretrained("prithivida/passive_to_active_styletransfer")
       print("Passive to Active model loaded...")        
-      model_loaded = True
+      self.model_loaded = True
     else:
       print("Only CTF, FTC, ATP and PTA are supported in the pre-release...stay tuned")
 
   def transfer(self, input_sentence, inference_on=0, quality_filter=0.95, max_candidates=5):
-      if model_loaded:
+      if self.model_loaded:
         if inference_on == 0:
           device = "cpu"
         elif inference_on == 1:
