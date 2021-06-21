@@ -9,8 +9,8 @@ class Demo:
             #key : (name , style_num)
             'ctf': ('Casual to Formal', 0),
             'ftc': ('Formal to Casual', 1),
-            # 'atp': ('Active to Passive', 2), # WIP
-            # 'pta': ('Passive to Active', 3)  # WIP
+            'atp': ('Active to Passive', 2),
+            'pta': ('Passive to Active', 3)
             }
         with open("streamlit_examples.json") as f:
             self.examples = json.load(f)
