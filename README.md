@@ -208,7 +208,7 @@ for source_sentence in source_sentences:
 [Casual]  let's hang out for dinner.
 ----------------------------------------------------------------------------------------------------
 [Formal]  We went to Barcelona for the weekend. We have a lot of things to tell you.
-[Casual]  i went to barcelona for the weekend, we have lots to tell u.
+[Casual]  hehe..we went to barcelona for the weekend..we got a lot of things to tell ya..
 ----------------------------------------------------------------------------------------------------
 ```
 
