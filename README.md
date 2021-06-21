@@ -14,7 +14,9 @@ A Neural Language Style Transfer framework to transfer natural language text smo
 - [Installation](#installation)
 - [Quick Start](#quick-start)
   * [Casual to Formal (Available now !)](#casual-to-formal--available-now---)
+  * [Formal to Casual (Available now !)](#formal-to-casual--available-now---)
   * [Active to Passive (Available now !)](#active-to-passive--available-now---)
+  * [Passive to Active (Available now !)](#passive-to-active--available-now---)
 - [Knobs](#knobs)
 - [Models](#models)
 - [Dataset](#dataset)
@@ -145,10 +147,80 @@ for source_sentence in source_sentences:
 ----------------------------------------------------------------------------------------------------
 ```
 
+### Formal to Casual (Available now !)
+```python
+from styleformer import Styleformer
+import warnings
+warnings.filterwarnings("ignore")
+
+# style = [0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active etc..]
+sf = Styleformer(style = 1) 
+import torch
+def set_seed(seed):
+  torch.manual_seed(seed)
+  if torch.cuda.is_available():
+    torch.cuda.manual_seed_all(seed)
+
+set_seed(1212)
+
+source_sentences = [
+"I would love to meet attractive men in town",
+"Please leave the room now",
+"It is a delicious icecream",
+"I am not paying this kind of money for that nonsense",
+"He is on cocaine and he cannot be trusted with this",
+"He is a very nice man and has a charming personality",
+"Let us go out for dinner",
+"We went to Barcelona for the weekend. We have a lot of things to tell you.",
+]   
+
+for source_sentence in source_sentences:
+    # inference_on = [0=Regular model On CPU, 1= Regular model On GPU, 2=Quantized model On CPU]
+    target_sentence = sf.transfer(source_sentence, inference_on=1, quality_filter=0.95, max_candidates=5)
+    print("[Formal] ", source_sentence)
+    if target_sentence is not None:
+        print("[Casual] ",target_sentence)
+    else:
+        print("No good quality transfers available !")
+    print("-" *100)        
+```
+
+```
+[Formal]  I would love to meet attractive men in town
+[Casual]  i want to meet hot guys in town
+----------------------------------------------------------------------------------------------------
+[Formal]  Please leave the room now
+[Casual]  leave the room now.
+----------------------------------------------------------------------------------------------------
+[Formal]  It is a delicious icecream
+[Casual]  It is a yummy icecream
+----------------------------------------------------------------------------------------------------
+[Formal]  I am not paying this kind of money for that nonsense
+[Casual]  But I'm not paying this kind of money for that crap
+----------------------------------------------------------------------------------------------------
+[Formal]  He is on cocaine and he cannot be trusted with this
+[Casual]  he is on coke and he can't be trusted with this
+----------------------------------------------------------------------------------------------------
+[Formal]  He is a very nice man and has a charming personality
+[Casual]  he is a really nice guy with a cute personality.
+----------------------------------------------------------------------------------------------------
+[Formal]  Let us go out for dinner
+[Casual]  let's hang out for dinner.
+----------------------------------------------------------------------------------------------------
+[Formal]  We went to Barcelona for the weekend. We have a lot of things to tell you.
+[Casual]  i went to barcelona for the weekend, we have lots to tell u.
+----------------------------------------------------------------------------------------------------
+```
+
 ### Active to Passive (Available now !)
 ```python
 # style = [0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active etc..]
 sf = Styleformer(style = 2) 
+```
+### Passive to Active (Available now !)
+```python
+# style = [0=Casual to Formal, 1=Formal to Casual, 2=Active to Passive, 3=Passive to Active etc..]
+sf = Styleformer(style = 3) 
 ```
 
 ## Knobs
@@ -163,9 +235,9 @@ target_sentence = sf.transfer(source_sentence, inference_on=0, quality_filter=0.
 |      Model          |Type                          |Status                         
 |----------------|-------------------------------|-----------------------------|
 |[prithivida/informal_to_formal_styletransfer](https://huggingface.co/prithivida/informal_to_formal_styletransfer)|Seq2Seq |Beta
-|prithivida/formal_to_informal_styletransfer|Seq2Seq    |WIP|
+|[prithivida/formal_to_informal_styletransfer](https://huggingface.co/prithivida/formal_to_informal_styletransfer)|Seq2Seq    |Beta|
 |[prithivida/active_to_passive_styletransfer](https://huggingface.co/prithivida/active_to_passive_styletransfer)|Seq2Seq    |Beta|
-|prithivida/passive_to_active_styletransfer|Seq2Seq    |WIP|
+|[prithivida/passive_to_active_styletransfer](https://huggingface.co/prithivida/passive_to_active_styletransfer)|Seq2Seq    |Beta|
 |prithivida/positive_to_negative_styletransfer|Seq2Seq    |WIP|
 |prithivida/negative_to_positive_styletransfer|Seq2Seq    |WIP|
 
