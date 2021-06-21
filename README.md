@@ -252,7 +252,7 @@ target_sentence = sf.transfer(source_sentence, inference_on=0, quality_filter=0.
 
 ## References
 - [Formality Style Transfer for Noisy Text: Leveraging Out-of-Domain
-Parallel Data for In-Domain Training via POS Masking)(https://www.aclweb.org/anthology/D19-5502.pdf)
+Parallel Data for In-Domain Training via POS Masking]https://www.aclweb.org/anthology/D19-5502.pdf)
 - [Generative Text Style Transfer for Improved Language Sophistication](http://cs230.stanford.edu/projects_winter_2020/reports/32069807.pdf)
 - [Delete, Retrieve, Generate: A Simple Approach to Sentiment and Style Transfer](https://arxiv.org/pdf/1804.06437.pdf)
 
