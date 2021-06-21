@@ -90,7 +90,7 @@ source_sentences = [
 for source_sentence in source_sentences:
     target_sentence = sf.transfer(source_sentence)
     print("-" *100)
-    print("[Informal] ", source_sentence)
+    print("[Casual] ", source_sentence)
     print("-" *100)
     if target_sentence is not None:
         print("[Formal] ",target_sentence)
@@ -100,49 +100,49 @@ for source_sentence in source_sentences:
 ```
 
 ```
-[Informal]  I am quitting my job
+[Casual]  I am quitting my job
 [Formal]  I will be stepping down from my job.
 ----------------------------------------------------------------------------------------------------
-[Informal]  Jimmy is on crack and can't trust him
+[Casual]  Jimmy is on crack and can't trust him
 [Formal]  Jimmy is a crack addict I cannot trust him
 ----------------------------------------------------------------------------------------------------
-[Informal]  What do guys do to show that they like a gal?
+[Casual]  What do guys do to show that they like a gal?
 [Formal]  What do guys do to demonstrate their affinity for women?
 ----------------------------------------------------------------------------------------------------
-[Informal]  i loooooooooooooooooooooooove going to the movies.
+[Casual]  i loooooooooooooooooooooooove going to the movies.
 [Formal]  I really like to go to the movies.
 ----------------------------------------------------------------------------------------------------
-[Informal]  That movie was fucking awesome
+[Casual]  That movie was fucking awesome
 [Formal]  That movie was wonderful.
 ----------------------------------------------------------------------------------------------------
-[Informal]  My mom is doing fine
+[Casual]  My mom is doing fine
 [Formal]  My mother is doing well.
 ----------------------------------------------------------------------------------------------------
-[Informal]  That was funny LOL
+[Casual]  That was funny LOL
 [Formal]  That was hilarious
 ----------------------------------------------------------------------------------------------------
-[Informal]  It's piece of cake, we can do it
+[Casual]  It's piece of cake, we can do it
 [Formal]  The whole process is simple and is possible.
 ----------------------------------------------------------------------------------------------------
-[Informal]  btw - ur avatar looks familiar
+[Casual]  btw - ur avatar looks familiar
 [Formal]  Also, your avatar looks familiar.
 ----------------------------------------------------------------------------------------------------
-[Informal]  who gives a crap?
+[Casual]  who gives a crap?
 [Formal]  Who cares?
 ----------------------------------------------------------------------------------------------------
-[Informal]  Howdy Lucy! been ages since we last met.
+[Casual]  Howdy Lucy! been ages since we last met.
 [Formal]  Hello, Lucy It has been a long time since we last met.
 ----------------------------------------------------------------------------------------------------
-[Informal]  Dude, this car's dope!
+[Casual]  Dude, this car's dope!
 [Formal]  I find this car very appealing.
 ----------------------------------------------------------------------------------------------------
-[Informal]  She's my bestie from college
+[Casual]  She's my bestie from college
 [Formal]  She is my best friend from college.
 ----------------------------------------------------------------------------------------------------
-[Informal]  I kinda have a feeling that he has a crush on you.
+[Casual]  I kinda have a feeling that he has a crush on you.
 [Formal]  I have a feeling that he is attracted to you.
 ----------------------------------------------------------------------------------------------------
-[Informal]  OMG! It's finger-lickin' good.
+[Casual]  OMG! It's finger-lickin' good.
 [Formal]  It is so good, it is delicious.
 ----------------------------------------------------------------------------------------------------
 ```
