@@ -1,7 +1,0 @@
-torch==1.9.0+cpu
-torchvision==0.10.0+cpu
-transformers==4.6.1
-sentencepiece==0.1.95
-streamlit==0.82.0
-python-Levenshtein
-fuzzywuzzy
