@@ -30,8 +30,11 @@ class Demo:
         return sf
         
     def main(self):
-        st.sidebar.title("Styleformer")
+        github_repo = 'https://github.com/PrithivirajDamodaran/Styleformer'
+        st.title("Styleformer")
+        st.write(f'GitHub Link - [{github_repo}]({github_repo})')
         st.write('A Neural Language Style Transfer framework to transfer natural language text smoothly between fine-grained language styles like formal/casual, active/passive, and many more')
+
         style_key = st.sidebar.selectbox(
             label='Choose Style',
             options=list(self.style_map.keys()),

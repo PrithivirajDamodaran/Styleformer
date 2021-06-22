@@ -1,0 +1,5 @@
+torch
+transformers
+sentencepiece
+python-Levenshtein
+fuzzywuzzy
