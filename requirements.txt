@@ -1,4 +1,5 @@
-torch==1.8.1
+torch==1.8.1+cpu
+torchvision==0.9.1+cpu
 transformers==4.6.1
 sentencepiece==0.1.95
 streamlit==0.82.0
