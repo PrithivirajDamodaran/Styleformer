@@ -133,7 +133,7 @@ class Styleformer():
      
       return self.atp_tokenizer.decode(preds[0], skip_special_tokens=True).strip()
 
-  def _passive_to_active(self, input_sentence, device):
+  def _passive_to_passive(self, input_sentence, device):
       pta_prefix = "transfer Passive to Active: "
       src_sentence = input_sentence
       input_sentence = pta_prefix + input_sentence
