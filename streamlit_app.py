@@ -5,6 +5,10 @@ import json
 
 class Demo:
     def __init__(self):
+        st.set_page_config(
+            page_title="Styleformer Demo",
+            initial_sidebar_state="expanded"
+            )
         self.style_map = {
             #key : (name , style_num)
             'ctf': ('Casual to Formal', 0),
@@ -12,6 +16,11 @@ class Demo:
             'atp': ('Active to Passive', 2),
             'pta': ('Passive to Active', 3)
             }
+        self.inference_map = {
+            0: 'Regular model on CPU',
+            1: 'Regular model on GPU',
+            2: 'Quantized model on CPU'
+        }
         with open("streamlit_examples.json") as f:
             self.examples = json.load(f)
 
@@ -28,12 +37,25 @@ class Demo:
             options=list(self.style_map.keys()),
             format_func=lambda x:self.style_map[x][0]
             )
-        confidence = st.sidebar.slider(
-            label='Confidence Score',
-            min_value=0.5,
-            max_value=0.99,
-            value=0.95
-            )
+        exp = st.sidebar.beta_expander('Knobs', expanded=True)
+        with exp:
+            inference_on = exp.selectbox(
+                label='Inference on',
+                options=list(self.inference_map.keys()),
+                format_func=lambda x:self.inference_map[x]
+                )
+            quality_filter = exp.slider(
+                label='Quality filter',
+                min_value=0.5,
+                max_value=0.99,
+                value=0.95
+                )
+            max_candidates = exp.number_input(
+                label='Max candidates',
+                min_value=1,
+                max_value=20,
+                value=5
+                )
         with st.spinner('Loading model..'):
             sf = self.load_sf(self.style_map[style_key][1])
         input_text = st.selectbox(
@@ -46,7 +68,7 @@ class Demo:
         )
 
         if input_text.strip():
-            result = sf.transfer(input_text, quality_filter=confidence)
+            result = sf.transfer(input_text, inference_on=inference_on, quality_filter=quality_filter, max_candidates=max_candidates)
             st.markdown(f'#### Output:')
             st.write('')
             if result:
