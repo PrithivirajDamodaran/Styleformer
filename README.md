@@ -21,6 +21,7 @@ A Neural Language Style Transfer framework to transfer natural language text smo
 - [Models](#models)
 - [Dataset](#dataset)
 - [Benchmark](#benchmark)
+- [Streamlit Demo](#streamlit-demo)
 - [References](#references)
 - [Citation](#citation)
 
@@ -249,6 +250,12 @@ target_sentence = sf.transfer(source_sentence, inference_on=0, quality_filter=0.
 
 ## Benchmark
 - TBD
+
+## Streamlit Demo
+```
+pip install streamlit
+streamlit run streamlit_app.py
+```
 
 ## References
 - [Formality Style Transfer for Noisy Text: Leveraging Out-of-Domain
