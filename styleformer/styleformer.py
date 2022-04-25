@@ -32,12 +32,12 @@ class Styleformer():
     else:
       print("Only CTF, FTC, ATP and PTA are supported in the pre-release...stay tuned")
 
-  def transfer(self, input_sentence, inference_on=0, quality_filter=0.95, max_candidates=5):
+  def transfer(self, input_sentence, inference_on=-1, quality_filter=0.95, max_candidates=5):
       if self.model_loaded:
-        if inference_on == 0:
+        if inference_on == -1:
           device = "cpu"
-        elif inference_on == 1:
-          device = "cuda:0"  
+        elif inference_on >= 0 && inference_on < 999:
+          device = "cuda:" + str(inference_on)
         else:  
           device = "cpu"
           print("Onnx + Quantisation is not supported in the pre-release...stay tuned.")
