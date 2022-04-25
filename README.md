@@ -177,7 +177,7 @@ source_sentences = [
 
 for source_sentence in source_sentences:
     # inference_on = [-1=Regular model On CPU, 0-998= Regular model On GPU, 999=Quantized model On CPU]
-    target_sentence = sf.transfer(source_sentence, inference_on=0, quality_filter=0.95, max_candidates=5)
+    target_sentence = sf.transfer(source_sentence, inference_on=-1, quality_filter=0.95, max_candidates=5)
     print("[Formal] ", source_sentence)
     if target_sentence is not None:
         print("[Casual] ",target_sentence)
