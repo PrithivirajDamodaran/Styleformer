@@ -227,8 +227,8 @@ sf = Styleformer(style = 3)
 ## Knobs
 
 ```python
-# inference_on = [0=Regular model On CPU, 1= Regular model On GPU, 2=Quantized model On CPU]
-target_sentence = sf.transfer(source_sentence, inference_on=0, quality_filter=0.95, max_candidates=5)
+# inference_on = [-1=Regular model On CPU, 0-998= Regular model On GPU, 999=Quantized model On CPU]
+target_sentence = sf.transfer(source_sentence, inference_on=-1, quality_filter=0.95, max_candidates=5)
 ```
 
 ## Models
