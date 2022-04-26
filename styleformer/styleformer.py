@@ -36,7 +36,7 @@ class Styleformer():
       if self.model_loaded:
         if inference_on == -1:
           device = "cpu"
-        elif inference_on >= 0 && inference_on < 999:
+        elif inference_on >= 0 and inference_on < 999:
           device = "cuda:" + str(inference_on)
         else:  
           device = "cpu"
