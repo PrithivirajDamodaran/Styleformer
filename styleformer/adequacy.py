@@ -1,6 +1,6 @@
 class Adequacy():
 
-  def __init__(self, model_tag='prithivida/parrot_adequacy_on_BART'):
+  def __init__(self, model_tag='prithivida/parrot_adequacy_model'):
     from transformers import AutoModelForSequenceClassification, AutoTokenizer
     self.nli_model = AutoModelForSequenceClassification.from_pretrained(model_tag)
     self.tokenizer = AutoTokenizer.from_pretrained(model_tag)
