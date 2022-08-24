@@ -1,32 +1,40 @@
 class Styleformer():
 
-  def __init__(self,  style=0):
+  def __init__(
+      self,
+      style=0,
+      ctf_model_tag="prithivida/informal_to_formal_styletransfer",
+      ftc_model_tag="prithivida/formal_to_informal_styletransfer",
+      atp_model_tag="prithivida/active_to_passive_styletransfer",
+      pta_model_tag="prithivida/passive_to_active_styletransfer",
+      adequacy_model_tag=None, 
+  ):
     from transformers import AutoTokenizer
     from transformers import AutoModelForSeq2SeqLM
     from styleformer import Adequacy
 
     self.style = style
-    self.adequacy = Adequacy()
+    self.adequacy = adequacy_model_tag and Adequacy(model_tag=adequacy_model_tag)
     self.model_loaded = False
 
     if self.style == 0:
-      self.ctf_tokenizer = AutoTokenizer.from_pretrained("prithivida/informal_to_formal_styletransfer")
-      self.ctf_model = AutoModelForSeq2SeqLM.from_pretrained("prithivida/informal_to_formal_styletransfer")
+      self.ctf_tokenizer = AutoTokenizer.from_pretrained(ctf_model_tag)
+      self.ctf_model = AutoModelForSeq2SeqLM.from_pretrained(ctf_model_tag)
       print("Casual to Formal model loaded...")
       self.model_loaded = True
     elif self.style == 1:
-      self.ftc_tokenizer = AutoTokenizer.from_pretrained("prithivida/formal_to_informal_styletransfer")
-      self.ftc_model = AutoModelForSeq2SeqLM.from_pretrained("prithivida/formal_to_informal_styletransfer")
+      self.ftc_tokenizer = AutoTokenizer.from_pretrained(ftc_model_tag)
+      self.ftc_model = AutoModelForSeq2SeqLM.from_pretrained(ftc_model_tag)
       print("Formal to Casual model loaded...")
       self.model_loaded = True  
     elif self.style == 2:
-      self.atp_tokenizer = AutoTokenizer.from_pretrained("prithivida/active_to_passive_styletransfer")
-      self.atp_model = AutoModelForSeq2SeqLM.from_pretrained("prithivida/active_to_passive_styletransfer")
+      self.atp_tokenizer = AutoTokenizer.from_pretrained(atp_model_tag)
+      self.atp_model = AutoModelForSeq2SeqLM.from_pretrained(atp_model_tag)
       print("Active to Passive model loaded...")  
       self.model_loaded = True
     elif self.style == 3:
-      self.pta_tokenizer = AutoTokenizer.from_pretrained("prithivida/passive_to_active_styletransfer")
-      self.pta_model = AutoModelForSeq2SeqLM.from_pretrained("prithivida/passive_to_active_styletransfer")
+      self.pta_tokenizer = AutoTokenizer.from_pretrained(pta_model_tag)
+      self.pta_model = AutoModelForSeq2SeqLM.from_pretrained(pta_model_tag)
       print("Passive to Active model loaded...")        
       self.model_loaded = True
     else:
