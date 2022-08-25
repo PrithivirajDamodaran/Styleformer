@@ -7,7 +7,7 @@ class Styleformer():
       ftc_model_tag="prithivida/formal_to_informal_styletransfer",
       atp_model_tag="prithivida/active_to_passive_styletransfer",
       pta_model_tag="prithivida/passive_to_active_styletransfer",
-      adequacy_model_tag=None, 
+      adequacy_model_tag="prithivida/parrot_adequacy_model", 
   ):
     from transformers import AutoTokenizer
     from transformers import AutoModelForSeq2SeqLM
