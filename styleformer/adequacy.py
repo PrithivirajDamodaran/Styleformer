@@ -23,6 +23,7 @@ class Adequacy():
       adequacy_scores = {}
       for para_phrase in para_phrases:
         x = self.tokenizer(input_phrase, para_phrase, return_tensors='pt', max_length=128, truncation=True)
+        x = x.to(device)
         self.adequacy_model = self.adequacy_model.to(device)
         logits = self.adequacy_model(**x).logits
         probs = logits.softmax(dim=1)
