@@ -18,23 +18,23 @@ class Styleformer():
     self.model_loaded = False
 
     if self.style == 0:
-      self.ctf_tokenizer = AutoTokenizer.from_pretrained(ctf_model_tag)
-      self.ctf_model = AutoModelForSeq2SeqLM.from_pretrained(ctf_model_tag)
+      self.ctf_tokenizer = AutoTokenizer.from_pretrained(ctf_model_tag, use_auth_token=True)
+      self.ctf_model = AutoModelForSeq2SeqLM.from_pretrained(ctf_model_tag, use_auth_token=True)
       print("Casual to Formal model loaded...")
       self.model_loaded = True
     elif self.style == 1:
-      self.ftc_tokenizer = AutoTokenizer.from_pretrained(ftc_model_tag)
-      self.ftc_model = AutoModelForSeq2SeqLM.from_pretrained(ftc_model_tag)
+      self.ftc_tokenizer = AutoTokenizer.from_pretrained(ftc_model_tag, use_auth_token=True)
+      self.ftc_model = AutoModelForSeq2SeqLM.from_pretrained(ftc_model_tag, use_auth_token=True)
       print("Formal to Casual model loaded...")
       self.model_loaded = True  
     elif self.style == 2:
-      self.atp_tokenizer = AutoTokenizer.from_pretrained(atp_model_tag)
-      self.atp_model = AutoModelForSeq2SeqLM.from_pretrained(atp_model_tag)
+      self.atp_tokenizer = AutoTokenizer.from_pretrained(atp_model_tag, use_auth_token=True)
+      self.atp_model = AutoModelForSeq2SeqLM.from_pretrained(atp_model_tag, use_auth_token=True)
       print("Active to Passive model loaded...")  
       self.model_loaded = True
     elif self.style == 3:
-      self.pta_tokenizer = AutoTokenizer.from_pretrained(pta_model_tag)
-      self.pta_model = AutoModelForSeq2SeqLM.from_pretrained(pta_model_tag)
+      self.pta_tokenizer = AutoTokenizer.from_pretrained(pta_model_tag, use_auth_token=True)
+      self.pta_model = AutoModelForSeq2SeqLM.from_pretrained(pta_model_tag, use_auth_token=True)
       print("Passive to Active model loaded...")        
       self.model_loaded = True
     else:
