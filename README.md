@@ -1,9 +1,9 @@
 [![PyPI - License](https://img.shields.io/hexpm/l/plug)](https://github.com/PrithivirajDamodaran/Styleformer/blob/main/LICENSE)
-[![Visits Badge](https://badges.pufler.dev/visits/PrithivirajDamodaran/Styleformer)](https://badges.pufler.dev)
+[![visitors](https://visitor-badge.glitch.me/badge?page_id=Styleformer.count_visitors)](https://visitor-badge.glitch.me)
 
 
 <p align="center">
-    <img src="images/Styleformer.png" width="65%" height="60%"/>
+    <img src="./images/Styleformer.png" width="65%" height="60%"/>
 </p>
 
 # Styleformer
